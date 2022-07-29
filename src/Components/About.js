@@ -14,7 +14,7 @@ const About = () => {
   return (
     <Box w="100%" position="relative" display="flex" flexWrap="wrap">
       <Box width={{ base: "100%", md: "50%" }} display="flex">
-        <Lottie options={defaultOptions} />
+        {/* <Lottie options={defaultOptions} /> */}
       </Box>
       <Box
         width={{ base: "100%", md: "50%" }}
