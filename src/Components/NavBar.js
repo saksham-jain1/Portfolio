@@ -59,32 +59,44 @@ const NavBar = () => {
           <MoonIcon />
         </Button>
       </Tooltip> */}
-      <Button m=".6rem" display={{ base: "flex", md: "none" }} onClick={() => onOpen()}>
+      <Button
+        m=".6rem"
+        display={{ base: "flex", md: "none" }}
+        onClick={() => onOpen()}
+      >
         <HamburgerIcon />
       </Button>
-        <Drawer onClose={onClose} isOpen={isOpen} size="xs">
-          <DrawerOverlay />
-          <DrawerContent>
-            <DrawerCloseButton />
-            <DrawerBody m={5}>
-              <a href="#home" className="navB" onClick={()=>onClose()}>
-                Home
-              </a>
-              <a href="#about" className="navB" onClick={()=>onClose()}>
-                About
-              </a>
-              <a href="#education" className="navB" onClick={()=>onClose()}>
-                Education
-              </a>
-              <a href="#project" className="navB" onClick={()=>onClose()}>
-                Project
-              </a>
-              <a href="#contact" className="navB" onClick={()=>onClose()}>
-                Contact
-              </a>
-            </DrawerBody>
-          </DrawerContent>
-        </Drawer>
+      <Drawer onClose={onClose} isOpen={isOpen} size="xs">
+        <DrawerOverlay />
+        <DrawerContent>
+          <DrawerCloseButton />
+          <DrawerBody m={5}>
+            <a
+              href="#home"
+              className="navB"
+              onClick={() => setTimeout(() => {onClose()}, 1000)}
+            >
+              Home
+            </a>
+            <a
+              href="#about"
+              className="navB"
+              onClick={() => setTimeout(() => {onClose()}, 1000)}
+            >
+              About
+            </a>
+            <a href="#education" className="navB" onClick={() => setTimeout(() => {onClose()}, 1000)}>
+              Education
+            </a>
+            <a href="#project" className="navB" onClick={() => setTimeout(() => {onClose()}, 1000)}>
+              Project
+            </a>
+            <a href="#contact" className="navB" onClick={() => setTimeout(() => {onClose()}, 1000)}>
+              Contact
+            </a>
+          </DrawerBody>
+        </DrawerContent>
+      </Drawer>
     </Box>
   );
 };
