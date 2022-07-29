@@ -1,7 +1,7 @@
 import { Box, Heading, Text } from '@chakra-ui/react';
 import React from 'react'
 import Lottie from 'react-lottie';
-import animationData from "../assets/developer1.json";
+import animationData from "../assets/developer3.json";
 const About = () => {
       const defaultOptions = {
         loop: true,

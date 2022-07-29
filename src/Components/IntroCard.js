@@ -3,7 +3,7 @@ import { Avatar, Box, Heading, Img, Text, Tooltip } from '@chakra-ui/react';
 import React from 'react'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import ReactTyped from 'react-typed';
-import avtar from "../assets/avtar.png";
+import avtar from "../assets/avtar1.png";
 
 const IntroCard = () => {
   const textLines = [
@@ -35,7 +35,7 @@ const IntroCard = () => {
         <Text fontSize="2rem">
           <ReactTyped strings={textLines} typeSpeed={90} backSpeed={40} loop />
         </Text>
-        <Img src={avtar} height="9rem" width="9rem" shadow="dark-lg" my="4" mx="auto" borderRadius="5rem" />
+        <Img src={avtar} height="12rem" width="12rem" shadow="dark-lg" my="4" mx="auto" borderRadius="6rem" />
         <Box
           w="100%"
           display="flex"
