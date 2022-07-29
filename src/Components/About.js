@@ -1,16 +1,16 @@
 import { Box, Heading, Text } from '@chakra-ui/react';
 import React from 'react'
-import Lottie from 'react-lottie';
-import animationData from "../assets/developer1.json";
+// import Lottie from 'react-lottie';
+// import animationData from "../assets/developer1.json";
 const About = () => {
-      const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: animationData,
-        rendererSettings: {
-          preserveAspectRatio: "xMidYMid slice",
-        },
-      };
+      // const defaultOptions = {
+      //   loop: true,
+      //   autoplay: true,
+      //   animationData: animationData,
+      //   rendererSettings: {
+      //     preserveAspectRatio: "xMidYMid slice",
+      //   },
+      // };
   return (
     <Box w="100%" position="relative" display="flex" flexWrap="wrap">
       <Box width={{ base: "100%", md: "50%" }} display="flex">
