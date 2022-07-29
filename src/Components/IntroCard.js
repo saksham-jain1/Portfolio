@@ -2,7 +2,7 @@ import { EmailIcon, PhoneIcon } from '@chakra-ui/icons';
 import { Avatar, Box, Text, Tooltip } from '@chakra-ui/react';
 import React from 'react'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
-// import ReactTyped from 'react-typed';
+import ReactTyped from 'react-typed';
 
 const IntroCard = () => {
   const textLines = [
@@ -30,7 +30,7 @@ const IntroCard = () => {
           Saksham Jain
         </Text>
         <Text fontSize={20}>
-          {/* <ReactTyped strings={textLines} typeSpeed={90} backSpeed={40} loop /> */}
+          <ReactTyped strings={textLines} typeSpeed={90} backSpeed={40} loop />
         </Text>
         <Avatar size="2xl" m="4" />
         <Box
