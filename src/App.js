@@ -15,6 +15,7 @@ function App() {
       <Box width="100vw" overflowY="clip">
         <NavBar />
         <Box
+        id="home"
           backgroundImage={bg}
           backgroundPosition="center"
           backgroundRepeat="no-repeat"

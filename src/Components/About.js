@@ -1,7 +1,7 @@
 import { Box, Heading, Text } from '@chakra-ui/react';
 import React from 'react'
 import Lottie from 'react-lottie';
-import animationData from "../assets/developer3.json";
+import animationData from "../assets/developer1.json";
 const About = () => {
       const defaultOptions = {
         loop: true,
@@ -12,9 +12,9 @@ const About = () => {
         },
       };
   return (
-    <Box w="100%" position="relative" display="flex" flexWrap="wrap">
+    <Box id='about' w="100%" position="relative" display="flex" flexWrap="wrap">
       <Box width={{ base: "100%", md: "50%" }} display="flex">
-        <Lottie options={defaultOptions} />
+        <Lottie h="100%" width="100%" options={defaultOptions} />
       </Box>
       <Box
         width={{ base: "100%", md: "50%" }}

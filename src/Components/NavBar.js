@@ -38,19 +38,19 @@ const NavBar = () => {
         flex={3}
         justifyContent="space-around"
       >
-        <a href="#id" className="navA">
+        <a href="#home" className="navA">
           Home
         </a>
-        <a href="#id" className="navA">
+        <a href="#about" className="navA">
           About
         </a>
-        <a href="#id" className="navA">
+        <a href="#education" className="navA">
           Education
         </a>
-        <a href="#id" className="navA">
+        <a href="#project" className="navA">
           Project
         </a>
-        <a href="#id" className="navA">
+        <a href="#contact" className="navA">
           Contact
         </a>
       </Box>
@@ -67,19 +67,19 @@ const NavBar = () => {
           <DrawerContent>
             <DrawerCloseButton />
             <DrawerBody m={5}>
-              <a href="#id" className="navB">
+              <a href="#home" className="navB" onClick={()=>onClose()}>
                 Home
               </a>
-              <a href="#id" className="navB">
+              <a href="#about" className="navB" onClick={()=>onClose()}>
                 About
               </a>
-              <a href="#id" className="navB">
+              <a href="#education" className="navB" onClick={()=>onClose()}>
                 Education
               </a>
-              <a href="#id" className="navB">
+              <a href="#project" className="navB" onClick={()=>onClose()}>
                 Project
               </a>
-              <a href="#id" className="navB">
+              <a href="#contact" className="navB" onClick={()=>onClose()}>
                 Contact
               </a>
             </DrawerBody>
