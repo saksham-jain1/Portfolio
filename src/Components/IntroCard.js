@@ -1,8 +1,9 @@
 import { EmailIcon, PhoneIcon } from '@chakra-ui/icons';
-import { Avatar, Box, Heading, Text, Tooltip } from '@chakra-ui/react';
+import { Avatar, Box, Heading, Img, Text, Tooltip } from '@chakra-ui/react';
 import React from 'react'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import ReactTyped from 'react-typed';
+import avtar from "../assets/avtar.png";
 
 const IntroCard = () => {
   const textLines = [
@@ -17,7 +18,8 @@ const IntroCard = () => {
       display="flex"
       alignItems="center"
       justifyContent="center"
-      my="5rem"
+      mt="5rem"
+      mb="2rem"
       scrollBehavior="smooth"
     >
       <Box
@@ -25,6 +27,7 @@ const IntroCard = () => {
         className="glassyBox"
         w={{base:"95%",md:"75%"}}
         textAlign="center"
+        color="whiteAlpha.700"
       >
         <Heading my=".7rem" fontSize="3.9rem">
           Saksham Jain
@@ -32,7 +35,7 @@ const IntroCard = () => {
         <Text fontSize="2rem">
           <ReactTyped strings={textLines} typeSpeed={90} backSpeed={40} loop />
         </Text>
-        <Avatar size="2xl" m="4" />
+        <Img src={avtar} height="9rem" width="9rem" shadow="dark-lg" my="4" mx="auto" borderRadius="5rem" />
         <Box
           w="100%"
           display="flex"

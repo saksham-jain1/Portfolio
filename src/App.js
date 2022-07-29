@@ -5,8 +5,11 @@ import bg from "./assets/bg1.jpg";
 import "./index.css";
 import IntroCard from "./Components/IntroCard";
 import Greeting from "./Components/Greeting";
+import About from "./Components/About";
+
 
 function App() {
+
   return (
     <>
       <Box width="100vw" overflowY="clip">
@@ -17,9 +20,7 @@ function App() {
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
           bgAttachment="fixed"
-          h="max-contentq"
           w="100%"
-          minH="550px"
           position="relative"
           display="flex"
           flexWrap="wrap"
@@ -27,6 +28,7 @@ function App() {
           <IntroCard />
           <Greeting />
         </Box>
+        <About />
       </Box>
     </>
   );

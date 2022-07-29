@@ -54,12 +54,12 @@ const NavBar = () => {
           Contact
         </a>
       </Box>
-      <Tooltip label="Toggle to Dark Mode">
+      {/* <Tooltip label="Toggle to Dark Mode">
         <Button size="md" m={3}>
           <MoonIcon />
         </Button>
-      </Tooltip>
-      <Button display={{ base: "flex", md: "none" }} onClick={() => onOpen()}>
+      </Tooltip> */}
+      <Button m=".6rem" display={{ base: "flex", md: "none" }} onClick={() => onOpen()}>
         <HamburgerIcon />
       </Button>
         <Drawer onClose={onClose} isOpen={isOpen} size="xs">
