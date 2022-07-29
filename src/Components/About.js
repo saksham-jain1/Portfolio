@@ -4,7 +4,7 @@ import Lottie from 'react-lottie';
 import animationData from "../assets/developer1.json";
 const About = () => {
       const defaultOptions = {
-        loop: false,
+        loop: true,
         autoplay: true,
         animationData: animationData,
         rendererSettings: {
