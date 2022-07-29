@@ -1,14 +1,15 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
 import NavBar from "./Components/NavBar";
-import bg from "./assets/bgImage.png";
+import bg from "./assets/bg1.jpg";
 import "./index.css";
 import IntroCard from "./Components/IntroCard";
+import Greeting from "./Components/Greeting";
 
 function App() {
   return (
     <>
-      <Box width="100vw">
+      <Box width="100vw" overflowY="clip">
         <NavBar />
         <Box
           backgroundImage={bg}
@@ -24,7 +25,7 @@ function App() {
           flexWrap="wrap"
         >
           <IntroCard />
-          <Box></Box>
+          <Greeting />
         </Box>
       </Box>
     </>

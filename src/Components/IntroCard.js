@@ -1,5 +1,5 @@
 import { EmailIcon, PhoneIcon } from '@chakra-ui/icons';
-import { Avatar, Box, Text, Tooltip } from '@chakra-ui/react';
+import { Avatar, Box, Heading, Text, Tooltip } from '@chakra-ui/react';
 import React from 'react'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import ReactTyped from 'react-typed';
@@ -18,18 +18,18 @@ const IntroCard = () => {
       alignItems="center"
       justifyContent="center"
       my="5rem"
+      scrollBehavior="smooth"
     >
       <Box
         position="relative"
         className="glassyBox"
-        w="75%"
-        shadow="lg"
+        w={{base:"95%",md:"75%"}}
         textAlign="center"
       >
-        <Text my="4" fontSize={36}>
+        <Heading my=".7rem" fontSize="3.9rem">
           Saksham Jain
-        </Text>
-        <Text fontSize={20}>
+        </Heading>
+        <Text fontSize="2rem">
           <ReactTyped strings={textLines} typeSpeed={90} backSpeed={40} loop />
         </Text>
         <Avatar size="2xl" m="4" />
@@ -48,7 +48,7 @@ const IntroCard = () => {
             </Tooltip>
           </Text>
           <Text>
-            <Tooltip label="Call Me" placement="top">
+            <Tooltip label="Mail Me" placement="top">
               <a href="mailto:sj20011002@gmail.com">
                 <EmailIcon /> sj20011002@gmail.com
               </a>

@@ -4,6 +4,9 @@
     overflow-x: hidden;
     box-sizing: border-box;
     }
+    h2 {
+        overflow: hidden;
+    }
 ::-webkit-scrollbar {
     width: .4rem;
 }
@@ -66,10 +69,11 @@
 }
 
 .glassyBox {
-    padding: 10px;
+    padding: 1rem;
+    margin: 1rem;
     background: rgba(255, 255, 255, .15);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 20px rgb(148, 185, 239);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(109, 85, 85, 0.91);

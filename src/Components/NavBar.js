@@ -30,7 +30,7 @@ const NavBar = () => {
       position="fixed"
       zIndex={9}
     >
-      <Box fontSize="19px" flex={2} mx="2" display="flex" alignItems="center">
+      <Box fontSize="1.3rem" flex={2} mx="2" display="flex" alignItems="center">
         <Avatar size="md" mr="3" src={logo} /> <Text> Saksham Jain </Text>
       </Box>
       <Box
