@@ -67,7 +67,7 @@ const academics = [
       <Heading mb="5rem" textAlign="center" fontSize="4rem">
         Academics
       </Heading>
-      <Box position="absolute" top="-5rem" right="3rem">
+      <Box position="absolute" top="-3rem" right="3rem">
         <Lottie options={defaultOptions} />
       </Box>
         <VerticalTimeline
