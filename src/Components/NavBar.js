@@ -44,8 +44,8 @@ const NavBar = () => {
         <a href="#about" className="navA">
           About
         </a>
-        <a href="#education" className="navA">
-          Education
+        <a href="#academics" className="navA">
+          Academics
         </a>
         <a href="#project" className="navA">
           Project
@@ -85,8 +85,8 @@ const NavBar = () => {
             >
               About
             </a>
-            <a href="#education" className="navB" onClick={() => setTimeout(() => {onClose()}, 1000)}>
-              Education
+            <a href="#academics" className="navB" onClick={() => setTimeout(() => {onClose()}, 1000)}>
+              Academics
             </a>
             <a href="#project" className="navB" onClick={() => setTimeout(() => {onClose()}, 1000)}>
               Project

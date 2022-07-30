@@ -6,6 +6,7 @@ import "./index.css";
 import IntroCard from "./Components/IntroCard";
 import Greeting from "./Components/Greeting";
 import About from "./Components/About";
+import Academics from "./Components/Academics";
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       <Box width="100vw" overflowY="clip">
         <NavBar />
         <Box
-        id="home"
+          id="home"
           backgroundImage={bg}
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
@@ -30,6 +31,7 @@ function App() {
           <Greeting />
         </Box>
         <About />
+      <Academics />
       </Box>
     </>
   );
