@@ -64,11 +64,11 @@ const academics = [
       p="3rem"
       bg="gray.300"
     >
-      <Heading mb="5rem" textAlign="center" fontSize="4rem">
+      <Heading mb={{base:'0',md:"5rem"}} textAlign="center" fontSize="4rem">
         Academics
       </Heading>
-      <Box position="absolute" top="-3rem" right="3rem">
-        <Lottie options={defaultOptions} />
+      <Box position={{base:"relative",md:"absolute"}} right="3rem">
+        <Lottie height="50%" width="50%" options={defaultOptions} />
       </Box>
         <VerticalTimeline
           lineColor="linear-gradient(360deg, #e93d9b 0%, #486ed7 99%)"
