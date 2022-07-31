@@ -68,7 +68,7 @@ const academics = [
         Academics
       </Heading>
       <Box position={{base:"relative",md:"absolute"}} right="3rem">
-        <Lottie height="50%" width="50%" options={defaultOptions} />
+        <Lottie height="70%" width="70%" options={defaultOptions} />
       </Box>
         <VerticalTimeline
           lineColor="linear-gradient(360deg, #e93d9b 0%, #486ed7 99%)"
