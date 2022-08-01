@@ -34,8 +34,8 @@ function App() {
           <Greeting />
         </Box>
         <About />
-      {/* <Academics />
-      <Experince /> */}
+      <Academics />
+      <Experince />
       <Project />
       <Skills />
       </Box>
