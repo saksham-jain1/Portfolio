@@ -20,11 +20,10 @@ const Project = () => {
       </Heading>
       <Tabs
         width="100%"
-        px="1rem"
         variant="soft-rounded"
         colorScheme="green.600"
       >
-        <TabList display="flex" justifyContent="center" my="2rem">
+        <TabList px="1rem" display="flex" justifyContent="center" my="2rem">
           <Tab
             _selected={{
               color: "white",
