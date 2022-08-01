@@ -31,7 +31,8 @@ const NavBar = () => {
       zIndex={9}
     >
       <Box fontSize="1.3rem" flex={2} mx="2" display="flex" alignItems="center">
-        <Avatar size="md" mr="3" src={logo} /> <Text> Saksham Jain </Text>
+        <Avatar size="md" mr="3" my="2" src={logo} />{" "}
+        <Text> Saksham Jain </Text>
       </Box>
       <Box
         display={{ base: "none", md: "flex" }}
@@ -47,8 +48,17 @@ const NavBar = () => {
         <a href="#academics" className="navA">
           Academics
         </a>
+        <a href="#experince" className="navA">
+          Experince
+        </a>
         <a href="#project" className="navA">
           Project
+        </a>
+        <a href="#skills" className="navA">
+          Skills
+        </a>
+        <a href="#certificate" className="navA">
+          Certificate
         </a>
         <a href="#contact" className="navA">
           Contact
@@ -74,24 +84,79 @@ const NavBar = () => {
             <a
               href="#home"
               className="navB"
-              onClick={() => setTimeout(() => {onClose()}, 1000)}
+              onClick={() =>
+                setTimeout(() => {
+                  onClose();
+                }, 1000)
+              }
             >
               Home
             </a>
             <a
               href="#about"
               className="navB"
-              onClick={() => setTimeout(() => {onClose()}, 1000)}
+              onClick={() =>
+                setTimeout(() => {
+                  onClose();
+                }, 1000)
+              }
             >
               About
             </a>
-            <a href="#academics" className="navB" onClick={() => setTimeout(() => {onClose()}, 1000)}>
+            <a
+              href="#academics"
+              className="navB"
+              onClick={() =>
+                setTimeout(() => {
+                  onClose();
+                }, 1000)
+              }
+            >
               Academics
             </a>
-            <a href="#project" className="navB" onClick={() => setTimeout(() => {onClose()}, 1000)}>
+            <a
+              href="#experince"
+              className="navB"
+              onClick={() =>
+                setTimeout(() => {
+                  onClose();
+                }, 1000)
+              }
+            >
+              Experince
+            </a>
+            <a
+              href="#project"
+              className="navB"
+              onClick={() =>
+                setTimeout(() => {
+                  onClose();
+                }, 1000)
+              }
+            >
               Project
             </a>
-            <a href="#contact" className="navB" onClick={() => setTimeout(() => {onClose()}, 1000)}>
+            <a href="#skills" className="navB" onClick={() =>
+                setTimeout(() => {
+                  onClose();
+                }, 1000)} >
+              Skills
+            </a>
+            <a href="#certificate" className="navB" onClick={() =>
+                setTimeout(() => {
+                  onClose();
+                }, 1000)} >
+              Certificate
+            </a>
+            <a
+              href="#contact"
+              className="navB"
+              onClick={() =>
+                setTimeout(() => {
+                  onClose();
+                }, 1000)
+              }
+            >
               Contact
             </a>
           </DrawerBody>

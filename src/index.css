@@ -26,13 +26,14 @@
 }
 
     .navA {
+        margin: 0px 3px;
         display: flex;
         width: 100%;
         align-items: center;
         justify-content: center;
         position: relative;
         --b: 0.2em;
-        --c: #521471;
+        --c: #553C9A;
         color: #0000;
         padding-block: var(--b);
         background:
@@ -56,7 +57,7 @@
     justify-content: center;
     position: relative;
     --s: 0.1em;
-    --c: #521471;
+    --c: #553C9A;
     color: #0000;
     padding-bottom: var(--s);
     background:

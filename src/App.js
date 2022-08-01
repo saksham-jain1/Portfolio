@@ -7,6 +7,8 @@ import IntroCard from "./Components/IntroCard";
 import Greeting from "./Components/Greeting";
 import About from "./Components/About";
 import Academics from "./Components/Academics";
+import Experince from "./Components/Experince";
+import Project from "./Components/Project";
 
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
         </Box>
         <About />
       <Academics />
+      <Experince />
+      <Project />
       </Box>
     </>
   );
