@@ -1,8 +1,10 @@
 import { Box, Heading, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
 import React from 'react'
 import Card from './Card';
+import "../index.css"
 
 const Project = () => {
+  const ProjectDetail = {}
   return (
     <Box
       id="project"
@@ -13,7 +15,7 @@ const Project = () => {
       py="3rem"
       bg="blue.100"
     >
-      <Heading textAlign="center" width="100%" mb="1.5rem" fontSize="4rem">
+      <Heading textAlign="center" width="100%" mb="1rem" fontSize="4rem">
         Projects
       </Heading>
       <Tabs
@@ -22,12 +24,14 @@ const Project = () => {
         variant="soft-rounded"
         colorScheme="green.600"
       >
-        <TabList display="flex" justifyContent="center" mb={"1em"}>
+        <TabList display="flex" justifyContent="center" my="2rem">
           <Tab
             _selected={{
               color: "white",
               bg: "linear-gradient(360deg, #e93d9b 0%, #486ed7 99%)",
             }}
+            mr="2rem"
+            border="1px solid black"
             width={{ base: "20%", md: "20%" }}
           >
             All
@@ -37,22 +41,29 @@ const Project = () => {
               color: "white",
               bg: "linear-gradient(360deg, #e93d9b 0%, #486ed7 99%)",
             }}
+            mr="2rem"
+            border="1px solid black"
             width={{ base: "35%", md: "20%" }}
           >
-            Complete
+            Completed
           </Tab>
           <Tab
             _selected={{
               color: "white",
               bg: "linear-gradient(360deg, #e93d9b 0%, #486ed7 99%)",
             }}
+            border="1px solid black"
             width={{ base: "45%", md: "20%" }}
           >
             On-Going
           </Tab>
         </TabList>
         <TabPanels>
-          <TabPanel display="flex" justifyContent="space-evenly" >
+          <TabPanel display="flex" overflowX="auto" flexWrap="nowrap">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
             <Card />
             <Card />
             <Card />

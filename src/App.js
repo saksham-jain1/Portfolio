@@ -9,6 +9,7 @@ import About from "./Components/About";
 import Academics from "./Components/Academics";
 import Experince from "./Components/Experince";
 import Project from "./Components/Project";
+import Skills from "./Components/Skills";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
       <Academics />
       <Experince />
       <Project />
+      <Skills />
       </Box>
     </>
   );

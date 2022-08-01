@@ -35,7 +35,7 @@ const NavBar = () => {
         <Text> Saksham Jain </Text>
       </Box>
       <Box
-        display={{ base: "none", md: "flex" }}
+        display={{ base: "none", md: "flex", lg:"flex" }}
         flex={3}
         justifyContent="space-around"
       >
