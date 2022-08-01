@@ -52,7 +52,7 @@ const Project = () => {
           </Tab>
         </TabList>
         <TabPanels>
-          <TabPanel display="flex" flexWrap="wrap">
+          <TabPanel display="flex" justifyContent="space-evenly" >
             <Card />
             <Card />
             <Card />
