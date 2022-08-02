@@ -28,6 +28,10 @@
     display: none;
 }
 
+.tilty-glare-wrapper {
+    border-radius: .75rem;
+}
+
     .navA {
         margin: 0px 3px;
         display: flex;

@@ -38,6 +38,7 @@ const Experince = () => {
         mb={{ base: "0", md: "0", lg: "5rem" }}
         textAlign="center"
         fontSize="4rem"
+        zIndex="1"
       >
         Experince
       </Heading>

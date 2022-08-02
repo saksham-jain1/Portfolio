@@ -2,8 +2,18 @@ import { Box, Heading, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-u
 import React from 'react'
 import Card from './Card';
 import "../index.css"
+import Lottie from 'react-lottie';
+import animationData from "../assets/portfolio-background.json";
 
 const Project = () => {
+    const defaultOptions = {
+      loop: true,
+      autoplay: true,
+      animationData: animationData,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice",
+      },
+    };
   const ProjectDetail = {}
   return (
     <Box
@@ -13,20 +23,25 @@ const Project = () => {
       display="flex"
       flexWrap="wrap"
       py="3rem"
-      bg="blue.100"
     >
-      <Heading textAlign="center" width="100%" mb="1rem" fontSize="4rem">
+      <Box position="absolute" top="0">
+        <Lottie options={defaultOptions} />
+      </Box>
+      <Heading
+        zIndex="1"
+        textAlign="center"
+        width="100%"
+        mb="1rem"
+        fontSize="4rem"
+      >
         Projects
       </Heading>
-      <Tabs
-        width="100%"
-        variant="soft-rounded"
-        colorScheme="green.600"
-      >
+      <Tabs zIndex="1" width="100%" variant="soft-rounded">
         <TabList px="1rem" display="flex" justifyContent="center" my="2rem">
           <Tab
+            color="black"
+            bg="whiteAlpha.200"
             _selected={{
-              color: "white",
               bg: "linear-gradient(360deg, #e93d9b 0%, #486ed7 99%)",
             }}
             mr="2rem"
@@ -36,8 +51,9 @@ const Project = () => {
             All
           </Tab>
           <Tab
+            color="black"
+            bg="whiteAlpha.200"
             _selected={{
-              color: "white",
               bg: "linear-gradient(360deg, #e93d9b 0%, #486ed7 99%)",
             }}
             mr="2rem"
@@ -47,8 +63,9 @@ const Project = () => {
             Completed
           </Tab>
           <Tab
+            color="black"
+            bg="whiteAlpha.200"
             _selected={{
-              color: "white",
               bg: "linear-gradient(360deg, #e93d9b 0%, #486ed7 99%)",
             }}
             border="1px solid black"
@@ -58,7 +75,7 @@ const Project = () => {
           </Tab>
         </TabList>
         <TabPanels>
-          <TabPanel display="flex" overflowX="auto" flexWrap="nowrap">
+          <TabPanel display="flex" overflowX="auto" whiteSpace="nowrap">
             <Card />
             <Card />
             <Card />

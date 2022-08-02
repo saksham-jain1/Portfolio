@@ -4,7 +4,7 @@ import React from 'react'
 const Greeting = () => {
   return (
     <Box
-      width={{ base: "100%", md: "50%" }}
+      w={{ base: "100%", md: "50%" }}
       display="flex"
       flexDir="column"
       alignItems="center"
