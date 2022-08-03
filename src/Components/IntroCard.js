@@ -1,7 +1,8 @@
 import { EmailIcon, PhoneIcon } from '@chakra-ui/icons';
-import { Avatar, Box, Heading, Img, Text, Tooltip } from '@chakra-ui/react';
+import { Box, Heading, Img, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, Tooltip, useDisclosure } from '@chakra-ui/react';
 import React from 'react'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { MdLocationPin } from 'react-icons/md';
 import ReactTyped from 'react-typed';
 import avtar from "../assets/avtar1.png";
 
@@ -12,6 +13,7 @@ const IntroCard = () => {
     `I am a <b>Compitetive Coder</b>`,
     `I am a <b>Problem Solver</b>`,
   ];
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box
       width={{ base: "100%", md: "50%" }}
@@ -25,7 +27,7 @@ const IntroCard = () => {
       <Box
         position="relative"
         className="glassyBox"
-        w={{base:"95%",md:"75%"}}
+        w={{ base: "95%", md: "75%" }}
         textAlign="center"
         color="whiteAlpha.700"
       >
@@ -35,7 +37,15 @@ const IntroCard = () => {
         <Text fontSize="2rem">
           <ReactTyped strings={textLines} typeSpeed={90} backSpeed={40} loop />
         </Text>
-        <Img src={avtar} height="12rem" width="12rem" shadow="dark-lg" my="4" mx="auto" borderRadius="6rem" />
+        <Img
+          src={avtar}
+          height="12rem"
+          width="12rem"
+          shadow="dark-lg"
+          my="4"
+          mx="auto"
+          borderRadius="6rem"
+        />
         <Box
           w="100%"
           display="flex"
@@ -69,9 +79,35 @@ const IntroCard = () => {
               <AiFillLinkedin size={44} />
             </a>
           </Tooltip>
-          {/* <a href="#id">
-                  <InfoIcon boxSize={8} />
-                </a> */}
+          <Tooltip label="25.4484° N, 78.5685° E">
+            <a href="#">
+              <MdLocationPin size={44} onClick={onOpen} />
+            </a>
+          </Tooltip>
+          <Modal
+            blockScrollOnMount={false}
+            isOpen={isOpen}
+            onClose={onClose}
+            size="2xl"
+            isCentered
+          >
+            <ModalOverlay />
+            <ModalContent>
+              {/* <ModalHeader>My Location</ModalHeader> */}
+              <ModalCloseButton zIndex="1" />
+              <ModalBody>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115293.28373103395!2d78.49224793512049!3d25.44110124295313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397776d458ba7703%3A0x96e9cda55c3481ca!2sJhansi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1659546987749!5m2!1sen!2sin"
+                  width="100%"
+                  height="450"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </ModalBody>
+
+              <ModalFooter></ModalFooter>
+            </ModalContent>
+          </Modal>
         </Box>
       </Box>
     </Box>

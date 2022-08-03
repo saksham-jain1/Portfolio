@@ -64,7 +64,12 @@ const NavBar = () => {
         </a>
       </Box>
       <Tooltip label="Toggle to Dark Mode">
-        <Button position="absolute" right=".6rem" top="4rem" size="md">
+        <Button
+          position={{ base: "relative", md: "absolute" }}
+          right={{ base: "0", md: ".6rem" }}
+          top={{ base: "0", md: "4rem" }}
+          size="md"
+        >
           <MoonIcon />
         </Button>
       </Tooltip>
