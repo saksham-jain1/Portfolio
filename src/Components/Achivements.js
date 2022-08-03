@@ -29,7 +29,7 @@ const Achivements = () => {
       position="relative"
       display="flex"
       flexWrap="wrap"
-      p="3rem"
+      p={{base:"1.5rem",md:"3rem"}}
       justifyContent="space-evenly"
     >
       <Box
@@ -52,8 +52,8 @@ const Achivements = () => {
           width="45%"
           display="flex"
           position="absolute"
-          top={{ base: "-7rem", md: "-5rem", lg: "-6rem" }}
-          left={{ base: "-7rem", md: "-5rem", lg: "-8rem" }}
+          top={{ base: "-4rem", md: "-5rem", lg: "-6rem" }}
+          left={{ base: "-4rem", md: "-5rem", lg: "-8rem" }}
         >
           <Lottie h="100%" width="100%" options={defaultOptions} />
         </Box>
@@ -88,8 +88,8 @@ const Achivements = () => {
           width="45%"
           display="flex"
           position="absolute"
-          top={{ base: "-7rem", md: "-4rem", lg: "-7rem" }}
-          left={{ base: "-7rem", md: "-3rem", lg: "-5rem" }}
+          top={{ base: "-4rem", md: "-4rem", lg: "-7rem" }}
+          left={{ base: "-4rem", md: "-3rem", lg: "-5rem" }}
         >
           <Lottie h="100%" width="100%" options={defaultOptions1} />
         </Box>
