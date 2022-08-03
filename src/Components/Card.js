@@ -9,7 +9,12 @@ import "../index.css"
 const Card = ({data}) => {
   const link = "https://lottiefiles.com/36418-cecil-portfolio-background";
   return (
-    <Tilty gyroscope="true" glare="true" max="25" style={{margin:"1.5rem" }} >
+    <Tilty
+      gyroscope="true"
+      glare="true"
+      max="25"
+      style={{ margin: "1.5rem" }}
+    >
       <Box
         h="500px"
         w="360px"
