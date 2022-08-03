@@ -26,16 +26,15 @@ const NavBar = () => {
       alignItems="center"
       justifyContent="space-between"
       pl={5}
-      fontFamily="cursive"
       position="fixed"
       zIndex={9}
     >
       <Box fontSize="1.3rem" flex={2} mx="2" display="flex" alignItems="center">
         <Avatar size="md" mr="3" my="2" src={logo} />{" "}
-        <Text> Saksham Jain </Text>
+        <Text fontFamily="'cursive','Times New Roman'"> Saksham Jain </Text>
       </Box>
       <Box
-        display={{ base: "none", md: "flex", lg:"flex" }}
+        display={{ base: "none", md: "flex", lg: "flex" }}
         flex={3}
         justifyContent="space-around"
       >
@@ -46,7 +45,7 @@ const NavBar = () => {
           About
         </a>
         <a href="#academics" className="navA">
-          Academics
+          Academic
         </a>
         <a href="#experince" className="navA">
           Experince
@@ -57,18 +56,18 @@ const NavBar = () => {
         <a href="#skills" className="navA">
           Skills
         </a>
-        <a href="#certificate" className="navA">
-          Certificate
+        <a href="#achievements" className="navA">
+          Achivements
         </a>
         <a href="#contact" className="navA">
           Contact
         </a>
       </Box>
-      {/* <Tooltip label="Toggle to Dark Mode">
-        <Button size="md" m={3}>
+      <Tooltip label="Toggle to Dark Mode">
+        <Button position="absolute" right=".6rem" top="4rem" size="md">
           <MoonIcon />
         </Button>
-      </Tooltip> */}
+      </Tooltip>
       <Button
         m=".6rem"
         display={{ base: "flex", md: "none" }}
@@ -112,7 +111,7 @@ const NavBar = () => {
                 }, 1000)
               }
             >
-              Academics
+              Academic
             </a>
             <a
               href="#experince"
@@ -136,17 +135,27 @@ const NavBar = () => {
             >
               Project
             </a>
-            <a href="#skills" className="navB" onClick={() =>
+            <a
+              href="#skills"
+              className="navB"
+              onClick={() =>
                 setTimeout(() => {
                   onClose();
-                }, 1000)} >
+                }, 1000)
+              }
+            >
               Skills
             </a>
-            <a href="#certificate" className="navB" onClick={() =>
+            <a
+              href="#achievements"
+              className="navB"
+              onClick={() =>
                 setTimeout(() => {
                   onClose();
-                }, 1000)} >
-              Certificate
+                }, 1000)
+              }
+            >
+              Achivements
             </a>
             <a
               href="#contact"

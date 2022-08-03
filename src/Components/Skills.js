@@ -58,7 +58,7 @@ const Skills = () => {
       position="relative"
       display="flex"
       flexWrap="wrap"
-      pt="3rem"
+      py="3rem"
       bg="blue.100"
     >
       <Heading textAlign="center" width="100%" mb={{base:"0",md:"1rem"}} fontSize="4rem">

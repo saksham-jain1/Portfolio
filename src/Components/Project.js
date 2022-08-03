@@ -14,7 +14,15 @@ const Project = () => {
         preserveAspectRatio: "xMidYMid slice",
       },
     };
-  const ProjectDetail = {}
+  const ProjectDetail = [
+    {
+      name: "",
+      detail: "",
+      link1: "",
+      link2: "",
+      img: "",
+    }
+  ]
   return (
     <Box
       id="project"

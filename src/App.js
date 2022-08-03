@@ -10,6 +10,7 @@ import Academics from "./Components/Academics";
 import Experince from "./Components/Experince";
 import Project from "./Components/Project";
 import Skills from "./Components/Skills";
+import Achivements from "./Components/Achivements";
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
       <Experince />
       <Project />
       <Skills />
+      <Achivements />
       </Box>
     </>
   );

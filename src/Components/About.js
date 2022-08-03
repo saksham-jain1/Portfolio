@@ -24,10 +24,8 @@ const About = () => {
         justifyContent="center"
       >
         <Heading
-          fontSize="3rem"
+          fontSize="4rem"
           m="3rem"
-          color="blue.600"
-          textDecoration="underline"
         >
           About
         </Heading>
