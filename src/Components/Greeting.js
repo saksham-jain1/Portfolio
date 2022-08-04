@@ -1,5 +1,6 @@
-import { Box, Heading, Text } from '@chakra-ui/react';
+import { Box, Button, Heading, Text } from '@chakra-ui/react';
 import React from 'react'
+import Resume from "../assets/Sakshams Resume.pdf";
 
 const Greeting = () => {
   return (
@@ -19,6 +20,11 @@ const Greeting = () => {
         commodi dolorem eaque deserunt quo laudantium repellendus adipisci sunt
         porro optio quae possimus quasi, aut dolor veritatis.
       </Text>
+      <a href={Resume} download="Saksham's Resume">
+        <Button mt="1rem" colorScheme="teal" p="1.4rem" fontSize="1.6rem">
+          Download Resume
+        </Button>
+      </a>
     </Box>
   );
 }

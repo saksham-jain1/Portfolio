@@ -11,6 +11,7 @@ import {
   DrawerCloseButton,
   Tooltip,
   Text,
+  useColorMode,
 } from "@chakra-ui/react";
 import { SunIcon, MoonIcon, HamburgerIcon } from "@chakra-ui/icons";
 import "../index.css";
@@ -18,6 +19,7 @@ import logo from "../assets/logo.png"
 
 const NavBar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Box
       w="100%"
@@ -63,14 +65,15 @@ const NavBar = () => {
           Contact
         </a>
       </Box>
-      <Tooltip label="Toggle to Dark Mode">
+      <Tooltip label={`Toggle to ${colorMode === 'light' ? 'Dark' : 'Light'} Mode`}>
         <Button
           position={{ base: "relative", md: "absolute" }}
           right={{ base: "0", md: ".6rem" }}
           top={{ base: "0", md: "4rem" }}
           size="md"
+          onClick={toggleColorMode}
         >
-          <MoonIcon />
+          {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
         </Button>
       </Tooltip>
       <Button

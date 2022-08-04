@@ -79,7 +79,7 @@ const IntroCard = () => {
               <AiFillLinkedin size={44} />
             </a>
           </Tooltip>
-          <Tooltip label="25.4484° N, 78.5685° E">
+          <Tooltip label="My Location">
             <a href="#">
               <MdLocationPin size={44} onClick={onOpen} />
             </a>

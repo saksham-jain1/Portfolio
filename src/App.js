@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, useColorMode } from "@chakra-ui/react";
 import NavBar from "./Components/NavBar";
 import bg from "./assets/bg1.jpg";
 import "./index.css";
@@ -12,13 +12,14 @@ import Project from "./Components/Project";
 import Skills from "./Components/Skills";
 import Achivements from "./Components/Achivements";
 import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
 
 
 function App() {
-
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <>
-      <Box width="100vw" overflowY="clip">
+      <Box width="100vw">
         <NavBar />
         <Box
           id="home"
@@ -42,6 +43,7 @@ function App() {
       <Skills />
       <Achivements />
       <Contact />
+      <Footer />
       </Box>
     </>
   );
