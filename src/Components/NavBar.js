@@ -21,7 +21,7 @@ const NavBar = () => {
   return (
     <Box
       w="100%"
-      bg="whiteAlpha.700"
+      bg="whiteAlpha.800"
       display="flex"
       alignItems="center"
       justifyContent="space-between"
