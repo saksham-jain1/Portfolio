@@ -61,10 +61,11 @@ const Contact = () => {
       >
         { !loading ?
           <FormControl
-            w="80%"
+            w="100%"
             justifyContent="center"
             display="flex"
             flexDir="column"
+            p="2rem"
           >
             <Input
               boxShadow="dark-lg"
