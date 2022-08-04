@@ -53,7 +53,7 @@ const Achivements = () => {
           display="flex"
           position="absolute"
           top={{ base: "-4rem", md: "-5rem", lg: "-6rem" }}
-          left={{ base: "-4rem", md: "-5rem", lg: "-8rem" }}
+          left={{ base: "-3rem", md: "-5rem", lg: "-8rem" }}
         >
           <Lottie h="100%" width="100%" options={defaultOptions} />
         </Box>
@@ -89,7 +89,7 @@ const Achivements = () => {
           display="flex"
           position="absolute"
           top={{ base: "-4rem", md: "-4rem", lg: "-7rem" }}
-          left={{ base: "-4rem", md: "-3rem", lg: "-5rem" }}
+          left={{ base: "-3rem", md: "-3rem", lg: "-5rem" }}
         >
           <Lottie h="100%" width="100%" options={defaultOptions1} />
         </Box>
