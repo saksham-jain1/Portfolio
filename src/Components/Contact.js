@@ -32,7 +32,7 @@ const Contact = () => {
   const handleSend = () => {
     setLoading(true);
     setTimeout(() => {
-        
+
         setLoading(false);
     }, 2000);
   }
@@ -43,7 +43,7 @@ const Contact = () => {
       position="relative"
       display="flex"
       flexWrap="wrap"
-      bg="orange.200"
+      bg="teal.100"
     >
       <Heading mt="3rem" w="100%" textAlign="center" fontSize="4rem" zIndex="1">
         Contact Me
@@ -106,7 +106,7 @@ const Contact = () => {
               size="lg"
               placeholder="Write your message here"
             />
-            <Button mt="2rem" colorScheme="teal" onClick={handleSend} >Send</Button>
+            <Button mt="2rem" colorScheme="blue" onClick={handleSend} >Send</Button>
           </FormControl>
         : <Lottie height="100%" w="100%" options={defaultOptions1} /> }
       </Box>
