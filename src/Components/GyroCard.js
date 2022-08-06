@@ -15,7 +15,7 @@ const GyroCard = ({data}) => {
       style={{ boxShadow: "-6px -6px 18px 5px #000" }}
     >
       <Box p="1rem" h="200px">
-        <Image src={data.img} borderRadius="xl" />
+        <Image src={data.img} alt={data.name} borderRadius="xl" />
       </Box>
 
       <Box w="100%" h="400px" pt="1rem" position="relative">
@@ -28,6 +28,7 @@ const GyroCard = ({data}) => {
           display="flex"
           flexWrap="wrap"
           textAlign="justify"
+          color="blackAlpha.900"
         >
           {data.detail}
         </Text>

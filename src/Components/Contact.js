@@ -4,6 +4,7 @@ import {
   Heading,
   Input,
   Textarea,
+  useColorMode,
   useToast,
 } from "@chakra-ui/react";
 import React, { useRef, useState } from "react";
@@ -13,6 +14,7 @@ import animationData1 from "../assets/contact-email.json";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
   const [loading, setLoading] = useState(false);
   const form = useRef();
   const toast = useToast();
@@ -72,12 +74,11 @@ const Contact = () => {
       position="relative"
       display="flex"
       flexWrap="wrap"
-      bg="teal.100"
-      // color="white"
-      // style={{
-      //   backgroundImage:
-      //     "linear-gradient(to left, rgb(20 15 35), rgb(38, 12, 61))",
-      // }}
+      bg={
+        colorMode == "dark"
+          ? "linear-gradient(rgb(42 6 74), rgb(27 6 46))"
+          : "teal.100"
+      }
     >
       <Heading mt="3rem" w="100%" textAlign="center" fontSize="4rem" zIndex="1">
         Contact Me
@@ -102,6 +103,7 @@ const Contact = () => {
               flexDirection: "column",
               justifyContent: "center",
               width: "100%",
+              color: "black",
             }}
           >
             <Input
@@ -115,6 +117,7 @@ const Contact = () => {
               placeholder="Name"
               name="name"
               isRequired
+              _placeholder={{ color: "black", opacity: ".6" }}
             />
             <Input
               boxShadow="dark-lg"
@@ -128,6 +131,7 @@ const Contact = () => {
               placeholder="E-mail"
               name="email"
               isRequired
+              _placeholder={{ color: "black", opacity: ".6" }}
             />
             <Input
               boxShadow="dark-lg"
@@ -139,6 +143,7 @@ const Contact = () => {
               size="lg"
               placeholder="Subject"
               name="subject"
+              _placeholder={{ color: "black", opacity: ".6" }}
             />
             <Textarea
               boxShadow="dark-lg"
@@ -150,6 +155,7 @@ const Contact = () => {
               height="150px"
               name="message"
               isRequired
+              _placeholder={{ color: "black", opacity: ".6" }}
             />
             <Button
               mt="2rem"

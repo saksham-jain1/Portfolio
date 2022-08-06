@@ -1,4 +1,4 @@
-import { Box, Heading, List, ListIcon, ListItem } from '@chakra-ui/react'
+import { Box, Heading, List, ListIcon, ListItem, useColorMode } from '@chakra-ui/react'
 import React from 'react'
 import { GrAchievement, GrCertificate } from 'react-icons/gr';
 import Lottie from 'react-lottie';
@@ -6,6 +6,7 @@ import animationData from "../assets/certificate-ani.json";
 import animationData1 from "../assets/achievement.json";
 
 const Achivements = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
     const defaultOptions = {
         loop: true,
         autoplay: true,
@@ -47,6 +48,12 @@ const Achivements = () => {
         flexWrap="wrap"
         p={{ base: "1.5rem", md: "3rem" }}
         justifyContent="space-evenly"
+        bg={
+          colorMode == "dark"
+            ? "linear-gradient(rgb(42 6 74), rgb(27 6 46))"
+            : "transparent"
+        }
+        zIndex="-2"
       >
         <Box
           width={{ base: "100%", md: "45%" }}

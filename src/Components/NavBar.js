@@ -23,7 +23,7 @@ const NavBar = () => {
   return (
     <Box
       w="100%"
-      bg="whiteAlpha.800"
+      bg={colorMode=="light" ? "whiteAlpha.800" : "blackAlpha.700"}
       display="flex"
       alignItems="center"
       justifyContent="space-between"
@@ -39,6 +39,7 @@ const NavBar = () => {
         display={{ base: "none", md: "flex", lg: "flex" }}
         flex={3}
         justifyContent="space-around"
+        color={colorMode=="dark" ? "whiteAlpha.800" : "blackAlpha.700"}
       >
         <a href="#home" className="navA">
           Home

@@ -1,9 +1,10 @@
-import { Box, Heading, Tag } from "@chakra-ui/react";
+import { Box, Heading, Tag, useColorMode } from "@chakra-ui/react";
 import React from "react";
 import Lottie from "react-lottie";
 import animationData from "../assets/programming-computer.json";
 
 const Skills = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
       const defaultOptions = {
         loop: true,
         autoplay: true,
@@ -59,7 +60,11 @@ const Skills = () => {
       display="flex"
       flexWrap="wrap"
       py="3rem"
-      bg="blue.100"
+      bg={
+        colorMode == "dark"
+          ? "linear-gradient(rgb(42 6 74), rgb(27 6 46))"
+          : "blue.100"
+      }
     >
       <Heading textAlign="center" width="100%" mb={{base:"0",md:"1rem"}} fontSize="4rem">
         Skills

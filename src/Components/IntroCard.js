@@ -93,7 +93,6 @@ const IntroCard = () => {
           >
             <ModalOverlay />
             <ModalContent>
-              {/* <ModalHeader>My Location</ModalHeader> */}
               <ModalCloseButton zIndex="1" />
               <ModalBody>
                 <iframe

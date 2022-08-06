@@ -15,10 +15,7 @@ const Greeting = () => {
     >
       <Heading fontSize="3rem">Hey Visitors</Heading>
       <Text p="2rem" textAlign="justify" m="1rem" fontSize="1.6rem">
-        I am a Pre-final year Student Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Voluptate, vel! Aspernatur qui eius placeat, aliquid
-        commodi dolorem eaque deserunt quo laudantium repellendus adipisci sunt
-        porro optio quae possimus quasi, aut dolor veritatis.
+        I am a Pre-final year 
       </Text>
       <a href={Resume} download="Saksham's Resume">
         <Button mt="1rem" colorScheme="green" p="1.4rem" fontSize="1.6rem">

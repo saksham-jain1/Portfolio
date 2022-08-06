@@ -23,7 +23,9 @@ function App() {
         <NavBar />
         <Box
           id="home"
-          backgroundImage={bg}
+          backgroundImage={
+            colorMode == "dark" ? "linear-gradient(rgb(42 6 74), rgb(27 6 46))" : bg
+          }
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
@@ -37,13 +39,13 @@ function App() {
           <Greeting />
         </Box>
         <About />
-      <Academics />
-      <Experince />
-      <Project />
-      <Skills />
-      <Achivements />
-      <Contact />
-      <Footer />
+        <Academics />
+        <Experince />
+        <Project />
+        <Skills />
+        <Achivements />
+        <Contact />
+        <Footer />
       </Box>
     </>
   );

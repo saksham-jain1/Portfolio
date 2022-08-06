@@ -1,4 +1,4 @@
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Heading, useColorMode } from '@chakra-ui/react';
 import React from 'react'
 import Lottie from 'react-lottie';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
@@ -6,6 +6,7 @@ import animationData from "../assets/developer3.json";
 import { MdWork } from "react-icons/md"
 
 const Experince = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -39,6 +40,11 @@ const Experince = () => {
       flexDir="column"
       flexWrap="wrap"
       p="3rem"
+      bg={
+        colorMode == "dark"
+          ? "linear-gradient(rgb(42 6 74), rgb(27 6 46))"
+          : "white"
+      }
     >
       <Heading
         mb={{ base: "0", md: "0", lg: "5rem" }}
@@ -60,13 +66,28 @@ const Experince = () => {
           <VerticalTimelineElement
             key={curr.id}
             className="vertical-timeline-element--education"
-            contentStyle={{
-              background: "#A0AEC0",
-              color: "#fff",
-              boxShadow: "0 0px 30px #000",
-            }}
+            contentStyle={
+              colorMode === "dark"
+                ? {
+                    boxShadow: "0 0px 15px #fff",
+                    background: "RGBA(255, 255, 255, 0.3)",
+                    color: "black",
+                  }
+                : {
+                    background: "#A0AEC0",
+                    color: "#fff",
+                    boxShadow: "0 0px 30px #000",
+                  }
+            }
+            dateClassName={colorMode === "dark" ? "dark" : ""}
             date={curr.date}
-            contentArrowStyle={{ borderRight: ".6rem solid #A0AEC0" }}
+            contentArrowStyle={
+              colorMode === "dark"
+                ? {
+                    borderRight: ".6rem solid RGBA(255, 255, 255, 0.3)",
+                  }
+                : { borderRight: ".6rem solid #A0AEC0" }
+            }
             iconStyle={{
               background: "linear-gradient(360deg, #e93d9b 0%, #486ed7 99%)",
             }}

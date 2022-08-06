@@ -32,7 +32,8 @@ const Project = () => {
   const ProjectDetail = [
     {
       name: "Chatting WebApp",
-      detail: "This is simple Chatting WebApp where users Login/SignUp and then can chat in realtime, can add new friends, can add profile pic, create & edit group. This is created using MERN Stack, Charkra-Ui and Socket.io. ",
+      detail:
+        "This is simple Chatting WebApp where users Login/SignUp and then can chat in realtime, can add new friends, can add profile pic, create & edit group. This is created using MERN Stack, Charkra-Ui and Socket.io. ",
       link1: "https://github.com/saksham-jain1/Mern-Chat-App",
       link2: "https://chatting-app-0.herokuapp.com",
       status: "completed",
@@ -40,7 +41,8 @@ const Project = () => {
     },
     {
       name: "My Portfollio",
-      detail: "My Portfollio website this a fully responsive website where a visitor can see my work and can contact me. This is created using Reactjs & Chakra-Ui and some other js libraries for making it look good",
+      detail:
+        "My Portfollio website this a fully responsive website where a visitor can see my work and can contact me. This is created using Reactjs & Chakra-Ui and some other js libraries for making it look good",
       link1: "https://github.com/saksham-jain1/Portfollio",
       link2: "https://my-portfollio.herokuapp.com/",
       status: "completed",
@@ -48,7 +50,8 @@ const Project = () => {
     },
     {
       name: "Pharmacy Website",
-      detail: "A simple Ecommerce Website for Medicines which has 3 types of user: buyer, seller, admin with different permissions and usage. Here a user can buy medicine consult a Dr. and much more. This is created using HTML/CSS, Bootstap, JS, PHP, MySql, SMTP server",
+      detail:
+        "A simple Ecommerce Website for Medicines which has 3 types of user: buyer, seller, admin with different permissions and usage. Here a user can buy medicine consult a Dr. and much more. This is created using HTML/CSS, Bootstap, JS, PHP, MySql, SMTP server",
       link1: "https://github.com/saksham-jain1/pharmacy_management.github.io",
       link2: "",
       status: "completed",
@@ -56,7 +59,8 @@ const Project = () => {
     },
     {
       name: "Banking Website",
-      detail: "A Basic Banking Website created during sparks foundation internship. A user can create account in this and can do money transfer. This created using HTML/CSS, JS, BootStrap, PHP, MySql.",
+      detail:
+        "A Basic Banking Website created during sparks foundation internship. A user can create account in this and can do money transfer. This created using HTML/CSS, JS, BootStrap, PHP, MySql.",
       link1: "https://github.com/saksham-jain1/Banking-Website.github.io",
       link2: "",
       status: "completed",
@@ -64,7 +68,8 @@ const Project = () => {
     },
     {
       name: "Todo App",
-      detail: "A clone of Trello Web app where a user can manage day to day tasks, can make multiple lists of Cards, edit tasks, drag from one list to another. And all the data will be stored locally. This is created with Reactjs, Chakra-Ui, React DND",
+      detail:
+        "A clone of Trello Web app where a user can manage day to day tasks, can make multiple lists of Cards, edit tasks, drag from one list to another. And all the data will be stored locally. This is created with Reactjs, Chakra-Ui, React DND",
       link1: "https://github.com/saksham-jain1/todo-list",
       link2: "https://todo-list-011.herokuapp.com/",
       status: "completed",
@@ -72,11 +77,36 @@ const Project = () => {
     },
     {
       name: "Weather App",
-      detail: "A simple Weather WebApp which shows hourly and weakly weather data forecast using OpenWeather API",
+      detail:
+        "A simple Weather WebApp which shows hourly and weakly weather data forecast using OpenWeather API. This is created using Reactjs, Chakra-Ui, OpenWeather API.",
       link1: "https://github.com/saksham-jain1/React-weather-app",
       link2: "https://weather-app-000.herokuapp.com/",
       status: "completed",
       img: weatherApp,
+    },
+    {
+      name: "Movie Recomendation System",
+      detail: "",
+      link1: "#",
+      link2: "",
+      status: "ongoing",
+      img: "",
+    },
+    {
+      name: "Basic Photo Editor",
+      detail: "",
+      link1: "#",
+      link2: "",
+      status: "ongoing",
+      img: "",
+    },
+    {
+      name: "Discord App Clone",
+      detail: "",
+      link1: "#",
+      link2: "",
+      status: "ongoing",
+      img: "",
     },
   ];
   return (

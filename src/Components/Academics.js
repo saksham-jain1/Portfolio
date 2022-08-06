@@ -6,11 +6,13 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { GrCertificate } from "react-icons/gr";
 import { FaGraduationCap } from "react-icons/fa";
-import { Box, Heading } from '@chakra-ui/react';
+import { Box, Heading, useColorMode } from '@chakra-ui/react';
 import Lottie from 'react-lottie';
 import animationData from "../assets/book-loading.json";
+import "../index.css"
 
 const Academics = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
 const defaultOptions = {
   loop: true,
   autoplay: true,
@@ -64,7 +66,11 @@ const academics = [
       flexDir="column"
       flexWrap="wrap"
       p="3rem"
-      bg="gray.300"
+      bg={
+        colorMode == "dark"
+          ? "linear-gradient(rgb(42 6 74), rgb(27 6 46))"
+          : "gray.300"
+      }
     >
       <Heading
         mb={{ base: "0", md: "0", lg: "5rem" }}
@@ -84,10 +90,25 @@ const academics = [
       <VerticalTimeline lineColor="linear-gradient(360deg, #e93d9b 0%, #486ed7 99%)">
         {academics.map((curr) => (
           <VerticalTimelineElement
-          key={curr.id}
+            key={curr.id}
             className="vertical-timeline-element--education"
-            contentStyle={{ boxShadow: "0 0px 30px #000" }}
-            contentArrowStyle={{ borderRight: ".6rem solid #fff" }}
+            contentStyle={
+              colorMode === "dark"
+                ? {
+                    boxShadow: "0 0px 15px #fff",
+                    background: "RGBA(255, 255, 255, 0.3)",
+                    color: "#000",
+                  }
+                : { boxShadow: "0 0px 30px #000", color: "#000" }
+            }
+            dateClassName={colorMode === "dark" ? "dark" : ""}
+            contentArrowStyle={
+              colorMode === "dark"
+                ? {
+                    borderRight: ".6rem solid RGBA(255, 255, 255, 0.3)",
+                  }
+                : { borderRight: ".6rem solid #fff" }
+            }
             date={curr.date}
             iconStyle={{
               background: "linear-gradient(360deg, #e93d9b 0%, #486ed7 99%)",

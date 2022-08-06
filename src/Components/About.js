@@ -1,8 +1,9 @@
-import { Box, Heading, Text } from '@chakra-ui/react';
+import { Box, Heading, Text, useColorMode } from '@chakra-ui/react';
 import React from 'react'
 import Lottie from 'react-lottie';
-import animationData from "../assets/developer4.json";
+import animationData from "../assets/developer5.json";
 const About = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
       const defaultOptions = {
         loop: true,
         autoplay: true,
@@ -12,7 +13,18 @@ const About = () => {
         },
       };
   return (
-    <Box id='about' w="100%" position="relative" display="flex" flexWrap="wrap">
+    <Box
+      id="about"
+      w="100%"
+      position="relative"
+      display="flex"
+      bg={
+        colorMode == "dark"
+          ? "linear-gradient(rgb(42 6 74), rgb(27 6 46))"
+          : "white"
+      }
+      flexWrap="wrap"
+    >
       <Box width={{ base: "100%", md: "50%" }} display="flex">
         <Lottie h="100%" width="100%" options={defaultOptions} />
       </Box>
@@ -23,25 +35,10 @@ const About = () => {
         alignItems="center"
         justifyContent="center"
       >
-        <Heading
-          fontSize="4rem"
-          m="3rem"
-        >
+        <Heading fontSize="4rem" m="3rem">
           About
         </Heading>
-        <Text textAlign="justify" px="2rem" m="1rem" fontSize="1.6rem">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-          nemo cupiditate ut omnis, perspiciatis doloribus vel itaque corporis
-          iusto sapiente, similique sit nisi? Nihil commodi perferendis nulla
-          praesentium at cumque laborum, facilis error natus eveniet minima
-          voluptatem ab quis iusto consequuntur a minus et vero sapiente
-          laudantium similique blanditiis facere. Dolorum eius iusto unde ipsa.
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo aut
-          expedita similique eveniet facilis veniam provident nostrum
-          perspiciatis aperiam, blanditiis esse sit veritatis aliquid, deserunt
-          harum in, fugiat ab eum dicta quod! Dicta illo obcaecati facere
-          corrupti. At, nulla cum exercitationem temporibus quaerat et.
-        </Text>
+        <Text textAlign="justify" px="2rem" m="1rem" fontSize="1.6rem"></Text>
       </Box>
     </Box>
   );

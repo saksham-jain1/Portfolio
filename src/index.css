@@ -42,7 +42,6 @@
         position: relative;
         --b: 0.2em;
         --c: #553C9A;
-        color: #0000;
         padding-block: var(--b);
         background:
             linear-gradient(var(--c) 50%, #000 0) 0% calc(100% - var(--_p, 0%))/100% 200%,
@@ -66,7 +65,6 @@
     position: relative;
     --s: 0.1em;
     --c: #553C9A;
-    color: #0000;
     padding-bottom: var(--s);
     background:
         linear-gradient(90deg, var(--c) 50%, #000 0) calc(100% - var(--_p, 0%))/200% 100%,
@@ -89,4 +87,8 @@
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(109, 85, 85, 0.91);
+}
+
+.dark {
+    color: white;
 }
