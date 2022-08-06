@@ -21,7 +21,7 @@ const Greeting = () => {
         porro optio quae possimus quasi, aut dolor veritatis.
       </Text>
       <a href={Resume} download="Saksham's Resume">
-        <Button mt="1rem" colorScheme="teal" p="1.4rem" fontSize="1.6rem">
+        <Button mt="1rem" colorScheme="green" p="1.4rem" fontSize="1.6rem">
           Download Resume
         </Button>
       </a>

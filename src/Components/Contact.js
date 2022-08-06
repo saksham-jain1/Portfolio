@@ -73,6 +73,11 @@ const Contact = () => {
       display="flex"
       flexWrap="wrap"
       bg="teal.100"
+      // color="white"
+      // style={{
+      //   backgroundImage:
+      //     "linear-gradient(to left, rgb(20 15 35), rgb(38, 12, 61))",
+      // }}
     >
       <Heading mt="3rem" w="100%" textAlign="center" fontSize="4rem" zIndex="1">
         Contact Me
@@ -89,65 +94,74 @@ const Contact = () => {
         p="2rem"
       >
         {!loading ? (
-            <form ref={form} onSubmit={handleSend} style={{display:"flex",flexDirection:"column",justifyContent:"center",width:"100%"}}>
-              <Input
-                boxShadow="dark-lg"
-                borderRadius="lg"
-                bg="whiteAlpha.900"
-                p="1rem"
-                variant="flushed"
-                my="1rem"
-                size="lg"
-                placeholder="Name"
-                name="name"
-                isRequired
-              />
-              <Input
-                boxShadow="dark-lg"
-                borderRadius="lg"
-                bg="whiteAlpha.900"
-                p="1rem"
-                variant="flushed"
-                my="1rem"
-                size="lg"
-                type="email"
-                placeholder="E-mail"
-                name="email"
-                isRequired
-              />
-              <Input
-                boxShadow="dark-lg"
-                borderRadius="lg"
-                bg="whiteAlpha.900"
-                p="1rem"
-                variant="flushed"
-                my="1rem"
-                size="lg"
-                placeholder="Subject"
-                name="subject"
-              />
-              <Textarea
-                boxShadow="dark-lg"
-                borderRadius="lg"
-                bg="whiteAlpha.900"
-                my="1rem"
-                size="lg"
-                placeholder="Write your message here"
-                height="150px"
-                name="message"
-                isRequired
-              />
-              <Button
-                mt="2rem"
-                boxShadow="dark-lg"
-                size="lg"
-                fontSize="1.6rem"
-                colorScheme="blue"
-                type="submit"
-              >
-                Send
-              </Button>
-            </form>
+          <form
+            ref={form}
+            onSubmit={handleSend}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              width: "100%",
+            }}
+          >
+            <Input
+              boxShadow="dark-lg"
+              borderRadius="lg"
+              bg="whiteAlpha.900"
+              p="1rem"
+              variant="flushed"
+              my="1rem"
+              size="lg"
+              placeholder="Name"
+              name="name"
+              isRequired
+            />
+            <Input
+              boxShadow="dark-lg"
+              borderRadius="lg"
+              bg="whiteAlpha.900"
+              p="1rem"
+              variant="flushed"
+              my="1rem"
+              size="lg"
+              type="email"
+              placeholder="E-mail"
+              name="email"
+              isRequired
+            />
+            <Input
+              boxShadow="dark-lg"
+              borderRadius="lg"
+              bg="whiteAlpha.900"
+              p="1rem"
+              variant="flushed"
+              my="1rem"
+              size="lg"
+              placeholder="Subject"
+              name="subject"
+            />
+            <Textarea
+              boxShadow="dark-lg"
+              borderRadius="lg"
+              bg="whiteAlpha.900"
+              my="1rem"
+              size="lg"
+              placeholder="Write your message here"
+              height="150px"
+              name="message"
+              isRequired
+            />
+            <Button
+              mt="2rem"
+              boxShadow="dark-lg"
+              size="lg"
+              fontSize="1.6rem"
+              colorScheme="blue"
+              type="submit"
+            >
+              Send
+            </Button>
+          </form>
         ) : (
           <Lottie height="100%" w="100%" options={defaultOptions1} />
         )}

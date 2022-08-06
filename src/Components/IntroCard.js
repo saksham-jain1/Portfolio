@@ -8,10 +8,10 @@ import avtar from "../assets/avtar1.png";
 
 const IntroCard = () => {
   const textLines = [
-    `I am a <b>Software Developer</b>`,
-    `I am a <b>Web Developer</b>`,
-    `I am a <b>Compitetive Coder</b>`,
-    `I am a <b>Problem Solver</b>`,
+    `<b>Software Developer</b>`,
+    `<b>Web Developer</b>`,
+    `<b>Compitetive Coder</b>`,
+    `<b>Problem Solver</b>`,
   ];
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (

@@ -1,9 +1,16 @@
 import { Box, Heading, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
-import React from 'react'
-import Card from './Card';
+import React, { useEffect, useState } from 'react'
+import TiltCard from './TiltCard';
 import "../index.css"
 import Lottie from 'react-lottie';
 import animationData from "../assets/portfolio-background.json";
+import chatApp from "../assets/chatApp.png"
+import Banking from "../assets/Banking.png"
+import PharmacyProject from "../assets/PharmacyProject.png"
+import portfollio from "../assets/portfollio.png"
+import weatherApp from "../assets/weatherApp.png"
+import todoApp from "../assets/todoApp.png"
+import GyroCard from './GyroCard';
 
 const Project = () => {
     const defaultOptions = {
@@ -14,15 +21,64 @@ const Project = () => {
         preserveAspectRatio: "xMidYMid slice",
       },
     };
+      const [touchable, setTouchable] = useState(false);
+      useEffect(() => {
+        setTouchable(
+          "ontouchstart" in window ||
+            navigator.maxTouchPoints > 0 ||
+            navigator.msMaxTouchPoints > 0
+        );
+      }, []);
   const ProjectDetail = [
     {
-      name: "",
-      detail: "",
-      link1: "",
+      name: "Chatting WebApp",
+      detail: "This is simple Chatting WebApp where users Login/SignUp and then can chat in realtime, can add new friends, can add profile pic, create & edit group. This is created using MERN Stack, Charkra-Ui and Socket.io. ",
+      link1: "https://github.com/saksham-jain1/Mern-Chat-App",
+      link2: "https://chatting-app-0.herokuapp.com",
+      status: "completed",
+      img: chatApp,
+    },
+    {
+      name: "My Portfollio",
+      detail: "My Portfollio website this a fully responsive website where a visitor can see my work and can contact me. This is created using Reactjs & Chakra-Ui and some other js libraries for making it look good",
+      link1: "https://github.com/saksham-jain1/Portfollio",
+      link2: "https://my-portfollio.herokuapp.com/",
+      status: "completed",
+      img: portfollio,
+    },
+    {
+      name: "Pharmacy Website",
+      detail: "A simple Ecommerce Website for Medicines which has 3 types of user: buyer, seller, admin with different permissions and usage. Here a user can buy medicine consult a Dr. and much more. This is created using HTML/CSS, Bootstap, JS, PHP, MySql, SMTP server",
+      link1: "https://github.com/saksham-jain1/pharmacy_management.github.io",
       link2: "",
-      img: "",
-    }
-  ]
+      status: "completed",
+      img: PharmacyProject,
+    },
+    {
+      name: "Banking Website",
+      detail: "A Basic Banking Website created during sparks foundation internship. A user can create account in this and can do money transfer. This created using HTML/CSS, JS, BootStrap, PHP, MySql.",
+      link1: "https://github.com/saksham-jain1/Banking-Website.github.io",
+      link2: "",
+      status: "completed",
+      img: Banking,
+    },
+    {
+      name: "Todo App",
+      detail: "A clone of Trello Web app where a user can manage day to day tasks, can make multiple lists of Cards, edit tasks, drag from one list to another. And all the data will be stored locally. This is created with Reactjs, Chakra-Ui, React DND",
+      link1: "https://github.com/saksham-jain1/todo-list",
+      link2: "https://todo-list-011.herokuapp.com/",
+      status: "completed",
+      img: todoApp,
+    },
+    {
+      name: "Weather App",
+      detail: "A simple Weather WebApp which shows hourly and weakly weather data forecast using OpenWeather API",
+      link1: "https://github.com/saksham-jain1/React-weather-app",
+      link2: "https://weather-app-000.herokuapp.com/",
+      status: "completed",
+      img: weatherApp,
+    },
+  ];
   return (
     <Box
       id="project"
@@ -83,18 +139,37 @@ const Project = () => {
           </Tab>
         </TabList>
         <TabPanels>
-          <TabPanel display="flex" overflowX="auto" whiteSpace="nowrap">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+          <TabPanel display="flex" overflowX="auto">
+            {touchable
+              ? ProjectDetail.map((curr, id) => {
+                  return <GyroCard key={id} data={curr} />;
+                })
+              : ProjectDetail.map((curr, id) => {
+                  return <TiltCard key={id} data={curr} />;
+                })}
           </TabPanel>
-          <TabPanel></TabPanel>
-          <TabPanel></TabPanel>
+          <TabPanel display="flex" overflowX="auto">
+            {touchable
+              ? ProjectDetail.map((curr, id) => {
+                  if (curr.status === "completed")
+                    return <GyroCard key={id} data={curr} />;
+                })
+              : ProjectDetail.map((curr, id) => {
+                  if (curr.status === "completed")
+                    return <TiltCard key={id} data={curr} />;
+                })}
+          </TabPanel>
+          <TabPanel display="flex" overflowX="auto">
+            {touchable
+              ? ProjectDetail.map((curr, id) => {
+                  if (curr.status === "ongoing")
+                    return <GyroCard key={id} data={curr} />;
+                })
+              : ProjectDetail.map((curr, id) => {
+                  if (curr.status === "ongoing")
+                    return <TiltCard key={id} data={curr} />;
+                })}
+          </TabPanel>
         </TabPanels>
       </Tabs>
     </Box>

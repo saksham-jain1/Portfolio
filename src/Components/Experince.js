@@ -17,11 +17,17 @@ const Experince = () => {
   const experince = [
     {
       id: "1",
+      degree: "Cyber Security Research Intern",
+      place: "SISTMR Australia",
+      detail: "Learned About Kali Linux, WireShark and basics of Cyber Security",
+      date: "11-Feb-2022 to 30-May-2022",
+    },
+    {
+      id: "2",
       degree: "Web Developer And Design Intern",
       place: "The Sparks Foundation",
-      detail: "CGPA: 8.9 (till Aug 2022)",
-      date: "July 2021 - Aug 2021",
-      icon: true,
+      detail: "Got to know about FullStack Web Development",
+      date: "July-2021 to Aug-2021",
     },
   ];
   return (
