@@ -2,6 +2,7 @@ import { Box, Heading, Tag, useColorMode } from "@chakra-ui/react";
 import React from "react";
 import Lottie from "react-lottie";
 import animationData from "../assets/programming-computer.json";
+import animationData1 from "../assets/39388-wolf-and-moon.json";
 
 const Skills = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -13,6 +14,14 @@ const Skills = () => {
           preserveAspectRatio: "xMidYMid slice",
         },
       };
+               const defaultOptions1 = {
+                 loop: true,
+                 autoplay: true,
+                 animationData: animationData1,
+                 rendererSettings: {
+                   preserveAspectRatio: "xMidYMid slice",
+                 },
+               };
   const SkillsData = [
     {
       title: "Technical Language",
@@ -60,19 +69,34 @@ const Skills = () => {
       display="flex"
       flexWrap="wrap"
       py="3rem"
-      bg={
-        colorMode == "dark"
-          ? "linear-gradient(rgb(42 6 74), rgb(27 6 46))"
-          : "blue.100"
-      }
+      bg={colorMode == "dark" ? "#29043890" : "blue.100"}
     >
-      <Heading textAlign="center" width="100%" mb={{base:"0",md:"1rem"}} fontSize="4rem">
+      {colorMode === "dark" ? (
+        <Box
+          position="absolute"
+          top="0"
+          left="0"
+          height="100%"
+          width="100%"
+          zIndex="-1"
+        >
+          <Lottie options={defaultOptions1} />
+        </Box>
+      ) : (
+        " "
+      )}
+      <Heading
+        textAlign="center"
+        width="100%"
+        mb={{ base: "0", md: "1rem" }}
+        fontSize="4rem"
+      >
         Skills
       </Heading>
       <Box
         position={{ base: "relative", md: "relative", lg: "absolute" }}
-        right={{base:"0",md:"3rem"}}
-        top={{base:"-1rem",md:"5rem"}}
+        right={{ base: "0", md: "3rem" }}
+        top={{ base: "-1rem", md: "5rem" }}
       >
         <Lottie options={defaultOptions} />
       </Box>

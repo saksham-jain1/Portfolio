@@ -49,11 +49,11 @@ const Achivements = () => {
         p={{ base: "1.5rem", md: "3rem" }}
         justifyContent="space-evenly"
         bg={
-          colorMode == "dark"
+          colorMode === "dark"
             ? "linear-gradient(rgb(42 6 74), rgb(27 6 46))"
             : "transparent"
         }
-        zIndex="-2"
+        zIndex="-1"
       >
         <Box
           width={{ base: "100%", md: "45%" }}

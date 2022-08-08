@@ -40,11 +40,7 @@ const Experince = () => {
       flexDir="column"
       flexWrap="wrap"
       p="3rem"
-      bg={
-        colorMode == "dark"
-          ? "linear-gradient(rgb(42 6 74), rgb(27 6 46))"
-          : "white"
-      }
+      bg={colorMode === "dark" ? "#290438b0" : "white"}
     >
       <Heading
         mb={{ base: "0", md: "0", lg: "5rem" }}

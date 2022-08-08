@@ -13,50 +13,50 @@ import "../index.css"
 
 const Academics = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-const defaultOptions = {
-  loop: true,
-  autoplay: true,
-  animationData: animationData,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-};
-const academics = [
-  {
-    id: "1",
-    degree: "Bachelor of Technology (Computer Science Engineering)",
-    place: "Medi-Caps University, Indore(M.P)",
-    detail: "CGPA: 8.9 (till Aug 2022)",
-    date: "2019 - present",
-    icon: true,
-  },
-  {
-    id: "2",
-    degree: "CCNAv7: Introduction to Networks (Educational Traning)",
-    place: "Cisco Networking Academy",
-    detail: "Percentage: 98.38%",
-    date: "July 2022 - Aug 2022",
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+  const academics = [
+    {
+      id: "1",
+      degree: "Bachelor of Technology (Computer Science Engineering)",
+      place: "Medi-Caps University, Indore(M.P)",
+      detail: "CGPA: 8.9 (till Aug 2022)",
+      date: "2019 - present",
+      icon: true,
+    },
+    {
+      id: "2",
+      degree: "CCNAv7: Introduction to Networks (Educational Traning)",
+      place: "Cisco Networking Academy",
+      detail: "Percentage: 98.38%",
+      date: "July 2022 - Aug 2022",
 
-    icon: false,
-  },
-  {
-    id: "3",
-    degree: "Higher Secondary / XIIth (PCM)",
-    place: "Jai Academy School (CBSE), Jhansi(U.P)",
-    detail: "Percentage: 72.6%",
-    date: "2018 - 2019",
+      icon: false,
+    },
+    {
+      id: "3",
+      degree: "Higher Secondary / XIIth (PCM)",
+      place: "Jai Academy School (CBSE), Jhansi(U.P)",
+      detail: "Percentage: 72.6%",
+      date: "2018 - 2019",
 
-    icon: true,
-  },
-  {
-    id: "4",
-    degree: "Secondary / Xth",
-    place: "Jai Academy School (CBSE), Jhansi(U.P)",
-    detail: "CGPA: 8.4",
-    date: "2016 - 2017",
-    icon: true,
-  },
-];
+      icon: true,
+    },
+    {
+      id: "4",
+      degree: "Secondary / Xth",
+      place: "Jai Academy School (CBSE), Jhansi(U.P)",
+      detail: "CGPA: 8.4",
+      date: "2016 - 2017",
+      icon: true,
+    },
+  ];
   return (
     <Box
       id="academics"
@@ -66,11 +66,7 @@ const academics = [
       flexDir="column"
       flexWrap="wrap"
       p="3rem"
-      bg={
-        colorMode == "dark"
-          ? "linear-gradient(rgb(42 6 74), rgb(27 6 46))"
-          : "gray.300"
-      }
+      bg={colorMode === "dark" ? "#290438b0" : "gray.300"}
     >
       <Heading
         mb={{ base: "0", md: "0", lg: "5rem" }}
@@ -124,6 +120,6 @@ const academics = [
       </VerticalTimeline>
     </Box>
   );
-}
+};
 
 export default Academics
