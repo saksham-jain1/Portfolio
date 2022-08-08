@@ -12,12 +12,12 @@ const Greeting = () => {
       alignItems="center"
       justifyContent="center"
       my="3rem"
-      color="whiteAlpha.700"
+      color="whiteAlpha.800"
     >
       <Heading fontSize="3rem">
         Hey Visitors <span id="wave">👋🏻</span>
       </Heading>
-      <Text p="2rem" textAlign="justify" m="1rem" fontSize="1.6rem"></Text>
+      <Text p="2rem" textAlign="justify" m="1rem" fontSize="1.6rem">I am a pre-final year B.Tech Student. This my portfollio website you can explore more about me on this.</Text>
       <a href={Resume} download="Saksham's Resume">
         <Button mt="1rem" colorScheme="green" p="1.4rem" fontSize="1.6rem">
           Download Resume

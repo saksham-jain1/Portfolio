@@ -61,10 +61,17 @@ const About = () => {
         <Heading fontSize="4rem" m="3rem">
           About
         </Heading>
-        <Text textAlign="justify" px="2rem" m="1rem" fontSize="1.6rem" color="black">
-          Hii, I am Saksham Jain from Jhansi(U.P), India. <br /> I am currently
-          pursuing B. Tech from MediCaps University Indore. <br /> Apart from
-          coding, some other activity that I love to do are:
+        <Text
+          textAlign="justify"
+          px="2rem"
+          m="1rem"
+          fontSize="1.6rem"
+          color="black"
+        >
+          Hii, I am Saksham Jain from Jhansi(U.P), India. I am a Tech Enthusiast. I love to code and learn different new Technologies.
+          <br /> I am currently pursuing B. Tech from MediCaps University
+          Indore. <br /> Apart from coding, some other activity that I love to
+          do are:
           <List m="1.5rem">
             <ListItem
               bg="whiteAlpha.200"
