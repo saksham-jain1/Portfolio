@@ -2,7 +2,7 @@ import { Box, Heading, Tag, useColorMode } from "@chakra-ui/react";
 import React from "react";
 import Lottie from "react-lottie";
 import animationData from "../assets/programming-computer.json";
-import animationData1 from "../assets/39388-wolf-and-moon.json";
+import darkBg1 from "../assets/night8.jpg";
 
 const Skills = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -14,14 +14,6 @@ const Skills = () => {
           preserveAspectRatio: "xMidYMid slice",
         },
       };
-               const defaultOptions1 = {
-                 loop: true,
-                 autoplay: true,
-                 animationData: animationData1,
-                 rendererSettings: {
-                   preserveAspectRatio: "xMidYMid slice",
-                 },
-               };
   const SkillsData = [
     {
       title: "Technical Language",
@@ -69,22 +61,13 @@ const Skills = () => {
       display="flex"
       flexWrap="wrap"
       py="3rem"
-      bg={colorMode == "dark" ? "#29043890" : "blue.100"}
+      bg={colorMode === "dark" ? "transparent" : "blue.100"}
+      backgroundImage={colorMode === "dark" ? darkBg1 : ""}
+      backgroundPosition="center"
+      backgroundRepeat="no-repeat"
+      backgroundSize="cover"
+      bgAttachment="fixed"
     >
-      {colorMode === "dark" ? (
-        <Box
-          position="absolute"
-          top="0"
-          left="0"
-          height="100%"
-          width="100%"
-          zIndex="-1"
-        >
-          <Lottie options={defaultOptions1} />
-        </Box>
-      ) : (
-        " "
-      )}
       <Heading
         textAlign="center"
         width="100%"

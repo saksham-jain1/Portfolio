@@ -73,6 +73,7 @@ const NavBar = () => {
           top={{ base: "0", md: "4rem" }}
           size="md"
           onClick={toggleColorMode}
+          colorScheme="orange"
         >
           {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
         </Button>

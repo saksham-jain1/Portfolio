@@ -4,6 +4,7 @@ import { GrAchievement, GrCertificate } from 'react-icons/gr';
 import Lottie from 'react-lottie';
 import animationData from "../assets/certificate-ani.json";
 import animationData1 from "../assets/achievement.json";
+import darkBg1 from "../assets/night7.jpg";
 
 const Achivements = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -48,12 +49,11 @@ const Achivements = () => {
         flexWrap="wrap"
         p={{ base: "1.5rem", md: "3rem" }}
         justifyContent="space-evenly"
-        bg={
-          colorMode === "dark"
-            ? "linear-gradient(rgb(42 6 74), rgb(27 6 46))"
-            : "transparent"
-        }
-        zIndex="-1"
+        backgroundImage={colorMode === "dark" ? darkBg1 : ""}
+        backgroundPosition="center"
+        backgroundRepeat="no-repeat"
+        backgroundSize="cover"
+        bgAttachment="fixed"
       >
         <Box
           width={{ base: "100%", md: "45%" }}

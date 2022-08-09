@@ -4,6 +4,7 @@ import Lottie from 'react-lottie';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import animationData from "../assets/developer3.json";
 import { MdWork } from "react-icons/md"
+import darkBg1 from "../assets/night.jpg";
 
 const Experince = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -40,7 +41,11 @@ const Experince = () => {
       flexDir="column"
       flexWrap="wrap"
       p="3rem"
-      bg={colorMode === "dark" ? "#290438b0" : "white"}
+      backgroundImage={colorMode === "dark" ? darkBg1 : ""}
+      backgroundPosition="center"
+      backgroundRepeat="no-repeat"
+      backgroundSize="cover"
+      bgAttachment="fixed"
     >
       <Heading
         mb={{ base: "0", md: "0", lg: "5rem" }}

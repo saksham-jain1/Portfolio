@@ -12,6 +12,7 @@ import Lottie from "react-lottie";
 import animationData from "../assets/contact-us-board.json";
 import animationData1 from "../assets/contact-email.json";
 import emailjs from "@emailjs/browser";
+import darkBg1 from "../assets/night6.jpg";
 
 const Contact = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -74,11 +75,12 @@ const Contact = () => {
       position="relative"
       display="flex"
       flexWrap="wrap"
-      bg={
-        colorMode == "dark"
-          ? "linear-gradient(rgb(42 6 74), rgb(27 6 46))"
-          : "teal.100"
-      }
+      bg="teal.100"
+      backgroundImage={colorMode === "dark" ? darkBg1 : ""}
+      backgroundPosition="center"
+      backgroundRepeat="no-repeat"
+      backgroundSize="cover"
+      bgAttachment="fixed"
     >
       <Heading mt="3rem" w="100%" textAlign="center" fontSize="4rem" zIndex="1">
         Contact Me

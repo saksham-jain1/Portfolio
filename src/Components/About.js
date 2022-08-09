@@ -2,8 +2,8 @@ import { Box, Heading, List, ListIcon, ListItem, Text, useColorMode } from '@cha
 import React from 'react'
 import Lottie from 'react-lottie';
 import animationData from "../assets/developer5.json";
-import animationData1 from "../assets/stars.json";
 import {ImPointRight} from "react-icons/im"
+import bg from '../assets/night2.jpg'
 
 const About = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -15,37 +15,19 @@ const About = () => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
-  const defaultOptions1 = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData1,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
   return (
     <Box
       id="about"
       w="100%"
       position="relative"
       display="flex"
-      bg={colorMode === "dark" ? "transparent" : "white"}
+      backgroundImage={colorMode === "dark" ? bg : "white"}
       flexWrap="wrap"
+      backgroundPosition="center"
+      backgroundRepeat="no-repeat"
+      backgroundSize="cover"
+      bgAttachment="fixed"
     >
-      {colorMode === "dark" ? (
-        <Box
-          position="absolute"
-          top="0"
-          left="0"
-          height="100%"
-          width="100%"
-          zIndex="-1"
-        >
-          <Lottie options={defaultOptions1} />
-        </Box>
-      ) : (
-        " "
-      )}
       <Box width={{ base: "100%", md: "50%" }} display="flex">
         <Lottie h="100%" width="100%" options={defaultOptions} />
       </Box>
@@ -55,8 +37,6 @@ const About = () => {
         flexDir="column"
         alignItems="center"
         justifyContent="center"
-        bg="whiteAlpha.400"
-        borderRadius="lg"
       >
         <Heading fontSize="4rem" m="3rem">
           About
@@ -66,9 +46,9 @@ const About = () => {
           px="2rem"
           m="1rem"
           fontSize="1.6rem"
-          color="black"
         >
-          Hii, I am Saksham Jain from Jhansi(U.P), India. I am a Tech Enthusiast. I love to code and learn different new Technologies.
+          Hii, I am Saksham Jain from Jhansi(U.P), India. I am a Tech
+          Enthusiast. I love to code and learn different new Technologies.
           <br /> I am currently pursuing B. Tech from MediCaps University
           Indore. <br /> Apart from coding, some other activity that I love to
           do are:

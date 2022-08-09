@@ -10,6 +10,7 @@ import { Box, Heading, useColorMode } from '@chakra-ui/react';
 import Lottie from 'react-lottie';
 import animationData from "../assets/book-loading.json";
 import "../index.css"
+import darkBg1 from "../assets/night4.jpg";
 
 const Academics = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -66,7 +67,12 @@ const Academics = () => {
       flexDir="column"
       flexWrap="wrap"
       p="3rem"
-      bg={colorMode === "dark" ? "#290438b0" : "gray.300"}
+      bg="gray.300"
+      backgroundImage={colorMode == "dark" ? darkBg1 : ""}
+      backgroundPosition="center"
+      backgroundRepeat="no-repeat"
+      backgroundSize="cover"
+      bgAttachment="fixed"
     >
       <Heading
         mb={{ base: "0", md: "0", lg: "5rem" }}
