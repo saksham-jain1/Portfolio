@@ -93,7 +93,8 @@
     color: white;
 }
 
-#wave {
+.waving {
+    display: inline-block;
     color:#000000;
     animation-name: wave-animation;
     animation-duration: 2.1s;

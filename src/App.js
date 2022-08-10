@@ -22,7 +22,7 @@ function App() {
         <NavBar />
         <Box
           id="home"
-          backgroundImage={colorMode == "dark" ? darkBg : darkBg}
+          backgroundImage={darkBg}
           backgroundPosition="center"
           backgroundRepeat="no-repeat"
           backgroundSize="cover"
