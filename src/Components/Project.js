@@ -79,8 +79,8 @@ const Project = () => {
       name: "Weather App",
       detail:
         "A simple Weather WebApp which shows hourly and weakly weather data forecast using OpenWeather API. This is created using Reactjs, Chakra-Ui, OpenWeather API.",
-      link1: "https://github.com/saksham-jain1/React-weather-app",
-      link2: "https://weather-app-000.herokuapp.com/",
+      link1: "https://github.com/saksham-jain1/WeatherWebApp",
+      link2: "https://weather-web-app-rosy.vercel.app/",
       status: "completed",
       img: weatherApp,
     },
